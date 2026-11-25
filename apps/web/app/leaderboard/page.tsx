@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { PageHeader, Panel, PanelTitle, Section, Stat, linkClass } from "@/components/ui";
+import { CodeBlock } from "@/components/code-block";
+import { PageHeader, Panel, PanelTitle, Section, Stat, cn, linkClass } from "@/components/ui";
 import { fmtBps, fmtDate, fmtInt, fmtUsd } from "@/lib/format";
 import { BLOCKSCOUT, leaderboard, shortAddress } from "@/lib/leaderboard";
 import { WalletTable } from "./wallet-table";
@@ -126,6 +127,58 @@ export default function LeaderboardPage() {
           </ul>
         </Panel>
       </Section>
+
+      <Section
+        id="api"
+        title="API"
+        lead="The same snapshot as versioned JSON for agents and scripts: metric definitions, summary percentiles and a paginated wallet list. CORS is open; 30 requests per minute per IP."
+      >
+        <div className="space-y-6">
+          <CodeBlock
+            title="curl"
+            code={`curl 'https://preflight-hsk.vercel.app/api/leaderboard?sort=volume&order=desc&limit=5&pretty=1'`}
+          />
+          <div className="overflow-x-auto rounded-lg bg-surface">
+            <table className="w-full min-w-[36rem] text-left text-sm">
+              <caption className="sr-only">Query parameters of GET /api/leaderboard</caption>
+              <thead className="text-muted">
+                <tr>
+                  <th scope="col" className="px-5 py-3 font-medium">
+                    Parameter
+                  </th>
+                  <th scope="col" className="px-5 py-3 font-medium">
+                    Values
+                  </th>
+                  <th scope="col" className="px-5 py-3 font-medium">
+                    Default
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {API_PARAMS.map((p, i) => (
+                  <tr key={p.name} className={cn(i % 2 === 0 && "bg-raised/40")}>
+                    <td className="px-5 py-3 font-mono text-ink">{p.name}</td>
+                    <td className="px-5 py-3 text-soft">{p.values}</td>
+                    <td className="px-5 py-3 font-mono text-soft">{p.default}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-sm text-muted">
+            Invalid parameters return 400 with <code className="font-mono">{`{ "error": { "code", "message" } }`}</code>.
+          </p>
+        </div>
+      </Section>
     </div>
   );
 }
+
+const API_PARAMS = [
+  { name: "sort", values: "volume · swaps · costBps (mean) · costUsd", default: "volume" },
+  { name: "order", values: "asc · desc", default: "desc" },
+  { name: "limit", values: "1–100", default: "50" },
+  { name: "offset", values: "integer ≥ 0", default: "0" },
+  { name: "wallet", values: "0x address, any letter case", default: "–" },
+  { name: "pretty", values: "1 · true · 0 · false", default: "0" },
+] as const;

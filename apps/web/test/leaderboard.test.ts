@@ -6,11 +6,11 @@ import { leaderboard, shortAddress } from "@/lib/leaderboard";
 
 describe("leaderboard snapshot", () => {
   it("/api/leaderboard serves the snapshot", async () => {
-    const res = GET();
+    const res = await GET(new Request("http://localhost/api/leaderboard", { headers: { "x-forwarded-for": "7.0.0.1" } }));
     expect(res.status).toBe(200);
-    const body = (await res.json()) as typeof leaderboard;
+    const body = (await res.json()) as { summary: { swaps: number }; data: unknown[] };
     expect(body.summary.swaps).toBe(leaderboard.summary.swaps);
-    expect(body.wallets.length).toBeGreaterThan(0);
+    expect(body.data.length).toBeGreaterThan(0);
   });
 
   it("totals reconcile with the research report (2,136 swaps, ≈$40.6k)", () => {

@@ -144,10 +144,29 @@ curl -X POST localhost:3000/api/curve -H 'content-type: application/json' -d '{"
 
 - `POST /api/quote` requires `agent` and `executor` (addresses); the signed quote is bound to both.
 - `/api/curve` is **POST only** with body `{"zeroForOne": boolean}` (no other fields); it returns the unsigned cost-vs-size curve ($50–$20k).
-- `GET /api/leaderboard` returns the 30-day execution-cost table.
+- `GET /api/leaderboard` returns the 30-day execution-cost table as versioned JSON (see [Leaderboard API](#leaderboard-api)).
 
 All variables are documented in [`.env.example`](.env.example). Without a deployed `GUARD_ADDRESS` the default policy is used.
 Rate limit: 30 requests/min per IP (`RATE_LIMIT_PER_MINUTE`, optionally shared via Upstash Redis) → HTTP 429 + `retry-after`; the in-memory limiter also has a global cap of 300/min per instance. Client IP comes from `x-vercel-forwarded-for` / `x-real-ip` (set by the platform); behind another proxy the **last** `X-Forwarded-For` hop is used, never the spoofable first hop.
+
+### Leaderboard API
+
+```sh
+curl 'https://preflight-hsk.vercel.app/api/leaderboard?sort=volume&order=desc&limit=5&pretty=1'
+```
+
+Response (`apiVersion: "1"`): `meta` (chain 177, pool + tokens, snapshot source, block/time range, metric definitions, methodology, limitations, units), `summary` (swaps, unique wallets, volume, cost bps mean/median/p75/p90/volume-weighted, volume-weighted breakdown fee/impact/CEX gap in bps and USD, distribution `<35`, `35-50`, `50-100`, `>=100` bps), `query`, `pagination` (`total`, `limit`, `offset`, `next`), `data` (per wallet: `rank`, `address`, `explorerUrl`, swaps, `volumeUsd`, mean/median/volume-weighted cost bps, `totalCostUsd`, USD breakdown, `firstSeen`, `lastSeen`), `links` (`self`, `next`, `docs`, `page`).
+
+| Param | Values | Default |
+| --- | --- | --- |
+| `sort` | `volume`, `swaps`, `costBps` (mean cost), `costUsd` | `volume` |
+| `order` | `asc`, `desc` | `desc` |
+| `limit` | 1–100 | 50 |
+| `offset` | integer ≥ 0 | 0 |
+| `wallet` | 0x address, any letter case | – |
+| `pretty` | `1`, `true`, `0`, `false` | `0` |
+
+`rank` is the position in the full sorted list (kept when filtering by `wallet`). Swaps whose sender could not be resolved are grouped in one row with `address: null` (`explorerUrl: null`); that row appears in the list but cannot be selected with `wallet=`. Null metric values sort last for both orders. The leaderboard has its own rate-limit bucket, separate from `/api/quote`. Invalid params → `400 {"error":{"code":"invalid_parameter","message":…}}`; rate limit (key `leaderboard:<ip>`, same 30/min) → `429 {"error":{"code":"rate_limited",…}}` + `retry-after`. Headers: `application/json; charset=utf-8`, `Access-Control-Allow-Origin: *` (+ `OPTIONS` preflight), `Cache-Control: public, max-age=300, s-maxage=3600, stale-while-revalidate=86400`. Data is the static snapshot; regenerate with `pnpm snapshot`.
 
 ### Run the agent
 

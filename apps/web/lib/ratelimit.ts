@@ -1,4 +1,4 @@
-// Per-IP rate limit for /api/quote. In-memory token bucket by default; Upstash Redis (REST) when
+// Per-IP rate limit for /api/quote (and, as a separate instance, /api/leaderboard). In-memory token bucket by default; Upstash Redis (REST) when
 // UPSTASH_REDIS_REST_URL + UPSTASH_REDIS_REST_TOKEN are set (shared across Vercel instances).
 
 export interface LimitResult {
@@ -140,6 +140,24 @@ export function quoteRateLimiter(): RateLimiter {
   const token = process.env.UPSTASH_REDIS_REST_TOKEN?.trim();
   limiter = url && token ? upstashRateLimiter({ url, token, limit: capacity, fallback: memory }) : memory;
   return limiter;
+}
+
+let leaderboardLimiter: RateLimiter | undefined;
+
+/**
+ * Separate limiter for GET /api/leaderboard (same per-IP limit, own global bucket, own key map), so leaderboard
+ * scraping can never use up the global budget or key slots of /api/quote. Upstash keys are already disjoint
+ * (`leaderboard:<ip>` vs `<ip>`).
+ */
+export function leaderboardRateLimiter(): RateLimiter {
+  if (leaderboardLimiter) return leaderboardLimiter;
+  const perMinute = Number(process.env.RATE_LIMIT_PER_MINUTE ?? 30);
+  const capacity = Number.isInteger(perMinute) && perMinute > 0 ? perMinute : 30;
+  const memory = cappedMemoryRateLimiter(capacity, DEFAULT_GLOBAL_PER_MINUTE);
+  const url = process.env.UPSTASH_REDIS_REST_URL?.trim();
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN?.trim();
+  leaderboardLimiter = url && token ? upstashRateLimiter({ url, token, limit: capacity, fallback: memory }) : memory;
+  return leaderboardLimiter;
 }
 
 /**

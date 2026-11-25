@@ -8,8 +8,10 @@ export interface Leaderboard {
   /** Research reference figures (research/REPORT.md) the snapshot is checked against. */
   reconciliation: { expectedSwaps: number; expectedVolumeUsd: number; swaps: number; volumeUsd: number; note: string };
   summary: Summary;
+  /** Per-swap totalCostBps percentiles (linear interpolation). */
+  costPercentilesBps: { p50: number | null; p75: number | null; p90: number | null };
   histogram: { fromBps: number; toBps: number | null; swaps: number; volumeUsd: number }[];
-  wallets: WalletStats[];
+  wallets: (WalletStats & { firstSwapAt: number })[];
   feed: { router: string | null; items: GuardedSwapFeedItem[] };
 }
 

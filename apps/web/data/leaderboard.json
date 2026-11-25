@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-25T03:17:02.856Z",
+ "generatedAt": "2026-11-25T11:32:28.337Z",
  "range": {
   "fromBlock": 29302744,
   "toBlock": 30598744,
@@ -38,6 +38,11 @@
   },
   "firstSwapAt": 1792953385,
   "lastSwapAt": 1795532247
+ },
+ "costPercentilesBps": {
+  "p50": 30.35,
+  "p75": 30.67,
+  "p90": 59.405
  },
  "histogram": [
   {
@@ -93,7 +98,8 @@
    "volumeWeightedCostBps": 39.060217527657166,
    "totalCostUsd": 150.49908937990008,
    "feeImpactUsd": 119.06702148749956,
-   "lastSwapAt": 1795528111
+   "lastSwapAt": 1795528111,
+   "firstSwapAt": 1792953385
   },
   {
    "wallet": "0xa40a12D0c47c9B7D91ca0C93E900892C3B45F000",
@@ -104,7 +110,8 @@
    "volumeWeightedCostBps": 35.560834764112656,
    "totalCostUsd": 6.7802988086610005,
    "feeImpactUsd": 6.780298808661,
-   "lastSwapAt": 1795237567
+   "lastSwapAt": 1795237567,
+   "firstSwapAt": 1794213025
   },
   {
    "wallet": "0x00326804fe6148BF5cE218dB6cBB285C4627A4b8",
@@ -115,7 +122,8 @@
    "volumeWeightedCostBps": 31.86,
    "totalCostUsd": 0.256292920908,
    "feeImpactUsd": 0.256292920908,
-   "lastSwapAt": 1794192945
+   "lastSwapAt": 1794192945,
+   "firstSwapAt": 1794192945
   },
   {
    "wallet": "0x98d50F1e66AD28aD1beEb377E83C940EA8ca5568",
@@ -126,7 +134,8 @@
    "volumeWeightedCostBps": 52.74034870344682,
    "totalCostUsd": 0.21642038481300005,
    "feeImpactUsd": 0.12360974921300001,
-   "lastSwapAt": 1795498605
+   "lastSwapAt": 1795498605,
+   "firstSwapAt": 1793374635
   },
   {
    "wallet": "0xCfDDe8CF26062229e1Bc12294c1029E531a7ac9A",
@@ -137,7 +146,8 @@
    "volumeWeightedCostBps": 104.11999999999998,
    "totalCostUsd": 0.1686744,
    "feeImpactUsd": 0.048794399999999995,
-   "lastSwapAt": 1793417155
+   "lastSwapAt": 1793417155,
+   "firstSwapAt": 1793417105
   },
   {
    "wallet": "0xaFBC2E998293A1d0Aa14644170729209a49Ee0F5",
@@ -148,7 +158,8 @@
    "volumeWeightedCostBps": 30.44,
    "totalCostUsd": 0.030440000000000002,
    "feeImpactUsd": 0.03044,
-   "lastSwapAt": 1793006305
+   "lastSwapAt": 1793006305,
+   "firstSwapAt": 1793006305
   },
   {
    "wallet": "0x7e093BA1474b79481f9B87D66c99a819F25e82E2",
@@ -159,7 +170,8 @@
    "volumeWeightedCostBps": 109.59727027490217,
    "totalCostUsd": 0.070472601068,
    "feeImpactUsd": 0.019324875968,
-   "lastSwapAt": 1795443975
+   "lastSwapAt": 1795443975,
+   "firstSwapAt": 1794210375
   },
   {
    "wallet": "0x1a71Af3aF568f85B8912f6fC6D92a75B1158850B",
@@ -170,7 +182,8 @@
    "volumeWeightedCostBps": 40.36300210929953,
    "totalCostUsd": 0.024256460949,
    "feeImpactUsd": 0.018042757448999996,
-   "lastSwapAt": 1793602937
+   "lastSwapAt": 1793602937,
+   "firstSwapAt": 1793461647
   },
   {
    "wallet": "0x062aF28251bcde1562f3F358096D54C18d7CeF2B",
@@ -181,7 +194,8 @@
    "volumeWeightedCostBps": 47.49400260577966,
    "totalCostUsd": 0.027412517183,
    "feeImpactUsd": 0.017334993083,
-   "lastSwapAt": 1795267641
+   "lastSwapAt": 1795267641,
+   "firstSwapAt": 1793338811
   },
   {
    "wallet": "0x0809434D95AB31d21e9DAa6D4CdBd0c1b99F8cF3",
@@ -192,7 +206,8 @@
    "volumeWeightedCostBps": 66.2897527378286,
    "totalCostUsd": 0.036542153278,
    "feeImpactUsd": 0.016549910578,
-   "lastSwapAt": 1795442197
+   "lastSwapAt": 1795442197,
+   "firstSwapAt": 1793811409
   },
   {
    "wallet": "0x9145AcF83F1ff539dA1dDF0D50c791C302AfE890",
@@ -203,7 +218,8 @@
    "volumeWeightedCostBps": 36.620101405580826,
    "totalCostUsd": 0.018266791377,
    "feeImpactUsd": 0.014976531477000002,
-   "lastSwapAt": 1793603479
+   "lastSwapAt": 1793603479,
+   "firstSwapAt": 1793418443
   },
   {
    "wallet": "0x0372B63390591007e61d0E15EcB40579F0D08dE3",
@@ -214,7 +230,8 @@
    "volumeWeightedCostBps": 79.40123634507381,
    "totalCostUsd": 0.038170802492,
    "feeImpactUsd": 0.014432005792,
-   "lastSwapAt": 1795489569
+   "lastSwapAt": 1795489569,
+   "firstSwapAt": 1793897261
   },
   {
    "wallet": "0x746cd4270a14eb55BB8A6A4C39204C7108b0e49d",
@@ -225,7 +242,8 @@
    "volumeWeightedCostBps": 55.24691810875507,
    "totalCostUsd": 0.026497676029999997,
    "feeImpactUsd": 0.014397676030000002,
-   "lastSwapAt": 1793895189
+   "lastSwapAt": 1793895189,
+   "firstSwapAt": 1793636515
   },
   {
    "wallet": "0xBEdD38f260e3C936d0A743A57F211cde97f7401F",
@@ -236,7 +254,8 @@
    "volumeWeightedCostBps": 62.10999999999999,
    "totalCostUsd": 0.029770801217999996,
    "feeImpactUsd": 0.014432439617999998,
-   "lastSwapAt": 1793489041
+   "lastSwapAt": 1793489041,
+   "firstSwapAt": 1793489041
   },
   {
    "wallet": "0x072E401629ac6Cb31516a30bE883FA053224D108",
@@ -247,7 +266,8 @@
    "volumeWeightedCostBps": 68.32756730633126,
    "totalCostUsd": 0.030411028674,
    "feeImpactUsd": 0.013361341274,
-   "lastSwapAt": 1795341447
+   "lastSwapAt": 1795341447,
+   "firstSwapAt": 1793803997
   },
   {
    "wallet": "0xD19CE1b12B3caD9E5a19455d1D368F52aCD2A761",
@@ -258,7 +278,8 @@
    "volumeWeightedCostBps": 65.01785287761487,
    "totalCostUsd": 0.025933801013,
    "feeImpactUsd": 0.011975134513,
-   "lastSwapAt": 1793530915
+   "lastSwapAt": 1793530915,
+   "firstSwapAt": 1793418443
   },
   {
    "wallet": "0x05C6516a09b04230620843eA2B624056658697C6",
@@ -269,7 +290,8 @@
    "volumeWeightedCostBps": 62.76392919403621,
    "totalCostUsd": 0.020899691742,
    "feeImpactUsd": 0.009994774142,
-   "lastSwapAt": 1795267639
+   "lastSwapAt": 1795267639,
+   "firstSwapAt": 1793338811
   },
   {
    "wallet": "0x0449410eF3b726138A1C2E6F1e0C3BF01Bf17c1F",
@@ -280,7 +302,8 @@
    "volumeWeightedCostBps": 63.76546207793872,
    "totalCostUsd": 0.021191195141999998,
    "feeImpactUsd": 0.009977781242,
-   "lastSwapAt": 1795243687
+   "lastSwapAt": 1795243687,
+   "firstSwapAt": 1792978723
   },
   {
    "wallet": "0x02139aB36E4B3dd88c286C5C53306F08258E4D53",
@@ -291,7 +314,8 @@
    "volumeWeightedCostBps": 55.141387476966266,
    "totalCostUsd": 0.01734111167,
    "feeImpactUsd": 0.00943949217,
-   "lastSwapAt": 1795442313
+   "lastSwapAt": 1795442313,
+   "firstSwapAt": 1793897259
   },
   {
    "wallet": "0xCa3b5788a5296429CCc2729dBB1bB0d523e992Fd",
@@ -302,7 +326,8 @@
    "volumeWeightedCostBps": 30.024982165825342,
    "totalCostUsd": 0.006008641465999999,
    "feeImpactUsd": 0.006008641465999999,
-   "lastSwapAt": 1793467479
+   "lastSwapAt": 1793467479,
+   "firstSwapAt": 1793459257
   },
   {
    "wallet": "0x8745a069574F6cD367d9877F04715617A77B7a6d",
@@ -313,7 +338,8 @@
    "volumeWeightedCostBps": 30.012049611506676,
    "totalCostUsd": 0.004027941188,
    "feeImpactUsd": 0.004027941188,
-   "lastSwapAt": 1795260935
+   "lastSwapAt": 1795260935,
+   "firstSwapAt": 1795258553
   },
   {
    "wallet": "0x3EeE68432E42cA90b1B9500732bB958E25155AFA",
@@ -324,7 +350,8 @@
    "volumeWeightedCostBps": 30.02,
    "totalCostUsd": 0.00266310422,
    "feeImpactUsd": 0.00266310422,
-   "lastSwapAt": 1795339757
+   "lastSwapAt": 1795339757,
+   "firstSwapAt": 1795339757
   },
   {
    "wallet": "0x6ce5A7E36A4e02B171Df6eA4d584e67a1BCd90D1",
@@ -335,7 +362,8 @@
    "volumeWeightedCostBps": 29.999999999999996,
    "totalCostUsd": 0.001570671,
    "feeImpactUsd": 0.001570671,
-   "lastSwapAt": 1793640209
+   "lastSwapAt": 1793640209,
+   "firstSwapAt": 1793638545
   },
   {
    "wallet": "0xF263F79cC709827FD476d6694C7352C2A7De4369",
@@ -346,7 +374,8 @@
    "volumeWeightedCostBps": 30,
    "totalCostUsd": 0.000733809,
    "feeImpactUsd": 0.000733809,
-   "lastSwapAt": 1795211521
+   "lastSwapAt": 1795211521,
+   "firstSwapAt": 1795211521
   },
   {
    "wallet": "0x1867b82dc712242cF301Ea53D58d1F4A1558E418",
@@ -357,7 +386,8 @@
    "volumeWeightedCostBps": 90,
    "totalCostUsd": 0.0011386169999999998,
    "feeImpactUsd": 0.0003795389999999999,
-   "lastSwapAt": 1795339887
+   "lastSwapAt": 1795339887,
+   "firstSwapAt": 1795339887
   },
   {
    "wallet": "0x4e4cCbA2822A4838Fa653028Fa91749bcF923c59",
@@ -368,7 +398,8 @@
    "volumeWeightedCostBps": 89,
    "totalCostUsd": 0.0010756539999999999,
    "feeImpactUsd": 0.00036258,
-   "lastSwapAt": 1795532247
+   "lastSwapAt": 1795532247,
+   "firstSwapAt": 1795532247
   },
   {
    "wallet": "0xD47f09708E00834f00A6BA63dF5Cc272935302A8",
@@ -379,7 +410,8 @@
    "volumeWeightedCostBps": 87.00000000000001,
    "totalCostUsd": 0.0008700000000000001,
    "feeImpactUsd": 0.0003,
-   "lastSwapAt": 1793242113
+   "lastSwapAt": 1793242113,
+   "firstSwapAt": 1793242113
   },
   {
    "wallet": "0x04b0A7AFD4Ab71C5d49c4bd578C2D9B8eA7DF36E",
@@ -390,7 +422,8 @@
    "volumeWeightedCostBps": 51.00000000000001,
    "totalCostUsd": 0.00044447519999999996,
    "feeImpactUsd": 0.000261456,
-   "lastSwapAt": 1793528733
+   "lastSwapAt": 1793528733,
+   "firstSwapAt": 1793528733
   },
   {
    "wallet": "0xD8bD4dBC8CdCB7E171892e9b7d7f52135d674032",
@@ -401,7 +434,8 @@
    "volumeWeightedCostBps": 29.999999999999996,
    "totalCostUsd": 0.00011999999999999999,
    "feeImpactUsd": 0.00011999999999999999,
-   "lastSwapAt": 1795211691
+   "lastSwapAt": 1795211691,
+   "firstSwapAt": 1795211691
   },
   {
    "wallet": "0x99375054F10Bd5854bFa850E1a422f4d0D540f07",
@@ -412,7 +446,8 @@
    "volumeWeightedCostBps": 72,
    "totalCostUsd": 0.00018933840000000002,
    "feeImpactUsd": 0.000078891,
-   "lastSwapAt": 1793295513
+   "lastSwapAt": 1793295513,
+   "firstSwapAt": 1793295513
   },
   {
    "wallet": "0xEbd93B8ad96C9174807E23d8520d3C9d62C3C388",
@@ -423,7 +458,8 @@
    "volumeWeightedCostBps": 44.92932833387675,
    "totalCostUsd": 0.0000551193,
    "feeImpactUsd": 0.000036804,
-   "lastSwapAt": 1792991667
+   "lastSwapAt": 1792991667,
+   "firstSwapAt": 1792956299
   }
  ],
  "feed": {

@@ -37,6 +37,16 @@ const client = createPublicClient({ transport: http(rpcUrl, { batch: { batchSize
 const log = (msg: string) => console.error(`[snapshot] ${msg}`);
 const readJson = (p: string): unknown => JSON.parse(readFileSync(p, "utf8"));
 
+/** Linear-interpolated percentile (q in [0,1]); q = 0.5 equals the core `median`. */
+function percentile(xs: readonly number[], q: number): number | null {
+  if (xs.length === 0) return null;
+  const s = [...xs].sort((a, b) => a - b);
+  const pos = (s.length - 1) * q;
+  const lo = Math.floor(pos);
+  const hi = Math.ceil(pos);
+  return s[lo]! + (s[hi]! - s[lo]!) * (pos - lo);
+}
+
 async function loadLogs(): Promise<{ logs: IndexerLog[]; source: string }> {
   const p = join(research, "swap_logs.json");
   if (existsSync(p)) return { logs: readJson(p) as IndexerLog[], source: "research/data/swap_logs.json" };
@@ -107,6 +117,11 @@ async function main() {
   const swaps = indexSwaps({ logs: inRange, pool, klines, senders });
   log(`indexed ${swaps.length} swaps in ${((Date.now() - t0) / 1000).toFixed(1)} s`);
   const summary = summarize(swaps);
+  const firstSeen = new Map<string, number>();
+  for (const s of swaps) {
+    const k = s.from ?? "unknown";
+    firstSeen.set(k, Math.min(firstSeen.get(k) ?? s.timestamp, s.timestamp));
+  }
 
   const routerEnv = process.env.ROUTER_ADDRESS?.trim();
   const router = routerEnv && isAddress(routerEnv) ? getAddress(routerEnv) : null;
@@ -133,8 +148,13 @@ async function main() {
           : `Selisih ${diffSwaps} swap vs research/REPORT.md (log duplikat dibuang / di luar rentang blok).`,
     },
     summary,
+    costPercentilesBps: {
+      p50: percentile(swaps.map((s) => s.totalCostBps), 0.5),
+      p75: percentile(swaps.map((s) => s.totalCostBps), 0.75),
+      p90: percentile(swaps.map((s) => s.totalCostBps), 0.9),
+    },
     histogram: costHistogram(swaps),
-    wallets: aggregateByWallet(swaps),
+    wallets: aggregateByWallet(swaps).map((w) => ({ ...w, firstSwapAt: firstSeen.get(w.wallet) ?? w.lastSwapAt })),
     feed: { router, items },
   };
   writeFileSync(outPath, `${JSON.stringify(out, null, 1)}\n`);
