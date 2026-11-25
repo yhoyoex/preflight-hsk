@@ -11,11 +11,11 @@ export const VERDICT_COPY: Record<VerdictKind, { label: string; summary: string;
   OUT_OF_RANGE: { label: "Out of range", summary: "The order runs past the scanned liquidity. Cost cannot be bounded.", tone: "stop" },
 };
 
-export const TONE_CLASSES: Record<Tone, { card: string; badge: string; dot: string }> = {
-  go: { card: "border-emerald-500/40 bg-emerald-500/10", badge: "text-emerald-300", dot: "bg-emerald-400" },
-  caution: { card: "border-amber-500/40 bg-amber-500/10", badge: "text-amber-300", dot: "bg-amber-400" },
-  info: { card: "border-sky-500/40 bg-sky-500/10", badge: "text-sky-300", dot: "bg-sky-400" },
-  stop: { card: "border-rose-500/40 bg-rose-500/10", badge: "text-rose-300", dot: "bg-rose-400" },
+export const TONE_CLASSES: Record<Tone, { card: string; badge: string; dot: string; chip: string; fill: string }> = {
+  go: { card: "bg-emerald-400/10", badge: "text-emerald-300", dot: "bg-emerald-400", chip: "bg-emerald-400/15 text-emerald-200", fill: "fill-emerald-400" },
+  caution: { card: "bg-amber-400/10", badge: "text-amber-300", dot: "bg-amber-400", chip: "bg-amber-400/15 text-amber-200", fill: "fill-amber-400" },
+  info: { card: "bg-sky-400/10", badge: "text-sky-300", dot: "bg-sky-400", chip: "bg-sky-400/15 text-sky-200", fill: "fill-sky-400" },
+  stop: { card: "bg-rose-400/10", badge: "text-rose-300", dot: "bg-rose-400", chip: "bg-rose-400/15 text-rose-200", fill: "fill-rose-400" },
 };
 
 export const CHECK_COPY: Record<RouterCheck, string> = {

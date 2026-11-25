@@ -11,6 +11,7 @@ contracts/broadcast/
 
 # Next.js
 .next/
+*.tsbuildinfo
 
 # research scratch / Python
 research/__pycache__/
