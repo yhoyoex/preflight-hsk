@@ -1,7 +1,7 @@
 # Preflight — demo video script (≤ 3:00)
 
 Target length 2:50. Narration is plain text, ready for TTS (numbers are written the way they should be spoken).
-Live app: https://preflight-hsk.vercel.app. Placeholders to fill before recording: `{{GUARD_ADDRESS}}`, `{{ROUTER_ADDRESS}}`, `{{TX_SUCCESS}}`, `{{TX_REVERT}}`, `{{REPO_URL}}`.
+Live app: https://preflight-hsk.vercel.app. Placeholders to fill before recording: `{{GUARD_ADDRESS}}`, `{{ROUTER_ADDRESS}}`, `{{TX_SUCCESS}}`, `{{TX_REVERT}}`.
 Reference screenshots: [`docs/screens/`](screens/).
 
 ## Timeline
@@ -17,7 +17,7 @@ Reference screenshots: [`docs/screens/`](screens/).
 | 2:05–2:20 | **Blockscout — success**: `https://hsk.blockscout.com/tx/{{TX_SUCCESS}}` — show `GuardedSwap` event / `reasonHash`. | On HSK Chain mainnet, the agent executes through the Guarded Router. The guard checks the signature, the nonce, the impact and the deviation, swaps, and then checks the real outcome again. The agent's reason is recorded on-chain as a hash. |
 | 2:20–2:35 | **Blockscout — revert**: `https://hsk.blockscout.com/tx/{{TX_REVERT}}` (or terminal of `pnpm start --scenario revert`) showing `DeviationTooHigh(325, 200)`. | And when the price moves between quote and execution, for example a bot front-runs the agent in the same block, the guard reverts with Deviation Too High: three hundred twenty-five basis points against a limit of two hundred. The agent pays gas, not the pushed price. |
 | 2:35–2:48 | **Leaderboard** `https://preflight-hsk.vercel.app/leaderboard` ([leaderboard.png](screens/leaderboard.png)). | The leaderboard replays all two thousand one hundred thirty-six swaps from the last thirty days: thirty-one wallets, median execution cost thirty point three five basis points, mostly the pool fee. |
-| 2:48–3:00 | Back to landing; show repo URL `{{REPO_URL}}` and contract address `{{GUARD_ADDRESS}}`. | One honest limit: the CEX price comes from a single trusted attestor today. Preflight: know the cost before you swap, and enforce it on-chain. |
+| 2:48–3:00 | Back to landing; show repo URL `https://github.com/yhoyoex/preflight-hsk` and contract address `{{GUARD_ADDRESS}}`. | One honest limit: the CEX price comes from a single trusted attestor today. Preflight: know the cost before you swap, and enforce it on-chain. |
 
 ## Shot checklist
 

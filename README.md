@@ -8,7 +8,7 @@ Target: HSK Chain mainnet (chain id 177), HSKSwap (Uniswap V3) WHSK/USDT 0.3% po
 | | |
 |---|---|
 | Live app | https://preflight-hsk.vercel.app — `/` landing, `/playground`, `/leaderboard` |
-| Source | {{REPO_URL}} |
+| Source | https://github.com/yhoyoex/preflight-hsk |
 | `ExecutionGuard` | [`{{GUARD_ADDRESS}}`](https://hsk.blockscout.com/address/{{GUARD_ADDRESS}}) |
 | `GuardedRouter` | [`{{ROUTER_ADDRESS}}`](https://hsk.blockscout.com/address/{{ROUTER_ADDRESS}}) |
 | Guarded swap (success) | [{{TX_SUCCESS}}](https://hsk.blockscout.com/tx/{{TX_SUCCESS}}) |
@@ -114,7 +114,7 @@ Default policy per agent (changeable via `ExecutionGuard.setPolicy`): `maxImpact
 Prerequisites: Node ≥ 22, pnpm, [Foundry](https://book.getfoundry.sh/) (`forge`, `anvil`, `cast`).
 
 ```sh
-git clone {{REPO_URL}} preflight && cd preflight
+git clone https://github.com/yhoyoex/preflight-hsk preflight && cd preflight
 pnpm install
 
 # TypeScript: unit tests, replay of on-chain swap logs, TS↔contract cross-check, sign.ts vs contract on anvil

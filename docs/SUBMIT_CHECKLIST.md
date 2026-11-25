@@ -11,7 +11,7 @@ Placeholders used in `README.md`, `docs/VIDEO_SCRIPT.md`, `docs/DORAHACKS.md`:
 | ~~`{{WEB_URL}}`~~ | https://preflight-hsk.vercel.app (already filled in) | [x] |
 | `{{TX_SUCCESS}}` | tx hash of a successful `guardedSwap` | [ ] |
 | `{{TX_REVERT}}` | tx hash of a reverted `guardedSwap` | [ ] |
-| `{{REPO_URL}}` | public GitHub URL | [ ] |
+| ~~`{{REPO_URL}}`~~ | https://github.com/yhoyoex/preflight-hsk (already filled in) | [x] |
 | `{{VIDEO_URL}}` | YouTube/Loom link (DORAHACKS.md only) | [ ] |
 | `{{TEAM}}` | team info (DORAHACKS.md only) | [ ] |
 
@@ -23,7 +23,7 @@ Find leftovers: `grep -rn "{{" README.md docs/`
 - [ ] `cd contracts && forge build && forge test` pass; fork tests pass with `--fork-url https://mainnet.hsk.xyz --fork-block-number 30609500`.
 - [ ] `contracts/lib/` (forge-std, openzeppelin-contracts) is included in the repo or as git submodules, so a clean clone builds.
 - [ ] No secrets committed: `.env*` ignored (only `.env.example`), no private keys in history (`git log -p | grep -i private_key`).
-- [ ] Initial commit + push to `{{REPO_URL}}`; repo is **public**.
+- [x] Initial commit + push to https://github.com/yhoyoex/preflight-hsk; repo is **public**.
 - [ ] Clean-clone test: clone into a temp dir, follow README Quickstart.
 
 ## 2. Deploy contracts (HSK Chain mainnet, 177)

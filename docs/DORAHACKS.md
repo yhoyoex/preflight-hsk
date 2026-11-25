@@ -1,6 +1,6 @@
 # DoraHacks BUIDL form — copy/paste
 
-Fill the placeholders `{{REPO_URL}}`, `{{GUARD_ADDRESS}}`, `{{ROUTER_ADDRESS}}`, `{{TX_SUCCESS}}`, `{{TX_REVERT}}` (and the video link) before submitting.
+Fill the placeholders `{{GUARD_ADDRESS}}`, `{{ROUTER_ADDRESS}}`, `{{TX_SUCCESS}}`, `{{TX_REVERT}}` (and the video link) before submitting.
 
 ## BUIDL name
 
@@ -71,7 +71,7 @@ Solidity 0.8.24, Foundry, OpenZeppelin · TypeScript, viem, zod · Next.js 16, R
 - Demo app: https://preflight-hsk.vercel.app
 - Playground: https://preflight-hsk.vercel.app/playground
 - Leaderboard: https://preflight-hsk.vercel.app/leaderboard
-- GitHub: {{REPO_URL}}
+- GitHub: https://github.com/yhoyoex/preflight-hsk
 - Video: {{VIDEO_URL}}
 - ExecutionGuard: https://hsk.blockscout.com/address/{{GUARD_ADDRESS}}
 - GuardedRouter: https://hsk.blockscout.com/address/{{ROUTER_ADDRESS}}
