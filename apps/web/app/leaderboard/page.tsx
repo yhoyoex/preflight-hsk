@@ -5,7 +5,7 @@ import { fmtBps, fmtDate, fmtInt, fmtUsd } from "@/lib/format";
 import { BLOCKSCOUT, leaderboard, shortAddress } from "@/lib/leaderboard";
 import { WalletTable } from "./wallet-table";
 
-export const metadata: Metadata = { title: "Execution cost leaderboard · Preflight" };
+export const metadata: Metadata = { title: "Execution cost leaderboard" };
 
 export default function LeaderboardPage() {
   const { summary: s, histogram, wallets, range, feed } = leaderboard;

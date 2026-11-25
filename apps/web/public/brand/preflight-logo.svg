@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 64" role="img" aria-label="Preflight">
+  <title>Preflight</title>
+  <path fill="#34d399" d="M32 4 55 12.5V30c0 14.4-9.6 25.4-23 30C18.6 55.4 9 44.4 9 30V12.5Z"/>
+  <path fill="none" stroke="#0b0c0f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" d="M20 33l8.5 8.5L44 24M34 23.5h10.5V34"/>
+  <text x="70" y="44" fill="#f3f4f6" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif" font-size="36" font-weight="600" letter-spacing="-0.7">Preflight</text>
+</svg>

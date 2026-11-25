@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/ui";
 import { Playground } from "./playground";
 
-export const metadata: Metadata = { title: "Playground · Preflight" };
+export const metadata: Metadata = { title: "Playground" };
 
 export default function PlaygroundPage() {
   return (

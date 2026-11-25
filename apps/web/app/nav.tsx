@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { LogoMark } from "@/components/logo";
 import { cn } from "@/components/ui";
 import { GITHUB_URL } from "@/lib/deployments";
 
@@ -15,7 +16,7 @@ export function SiteNav() {
   return (
     <nav aria-label="Main" className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
       <Link href="/" className="flex items-center gap-2 rounded-sm text-lg font-semibold tracking-tight text-ink">
-        <span aria-hidden="true" className="size-2.5 rounded-full bg-accent" />
+        <LogoMark className="size-7" />
         Preflight
       </Link>
       <ul className="flex items-center gap-1 text-sm">

@@ -1,16 +1,35 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { LogoMark } from "@/components/logo";
 import { GITHUB_URL, mainnetContracts } from "@/lib/deployments";
-
-const mainnetPending = mainnetContracts.some((c) => !c.address);
 import { SiteNav } from "./nav";
 import "./globals.css";
 
+const mainnetPending = mainnetContracts.some((c) => !c.address);
+
+const TITLE = "Preflight · execution guard for AI agents on HSK Chain";
+const DESCRIPTION =
+  "Preflight tells an AI agent what a swap costs before it is sent, and reverts on-chain past its limit.";
+
+// Icons and the OG image come from the file conventions in app/ (icon.svg, favicon.ico, apple-icon.png,
+// opengraph-image.tsx); Next adds those tags itself.
 export const metadata: Metadata = {
-  title: "Preflight · execution guard for AI agents on HSK Chain",
-  description: "Preflight tells an AI agent what a swap costs before it is sent, and reverts on-chain past its limit.",
+  metadataBase: new URL("https://preflight-hsk.vercel.app"),
+  title: { default: TITLE, template: "%s · Preflight" },
+  description: DESCRIPTION,
+  applicationName: "Preflight",
+  openGraph: {
+    type: "website",
+    siteName: "Preflight",
+    title: TITLE,
+    description: DESCRIPTION,
+    url: "/",
+  },
+  twitter: { card: "summary_large_image", title: TITLE, description: DESCRIPTION },
 };
+
+export const viewport = { themeColor: "#0b0c0f" };
 
 const footerLinks = [
   { href: "/playground", label: "Playground" },
@@ -37,7 +56,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <footer className="bg-surface">
           <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-[1.4fr_1fr]">
             <div className="space-y-3">
-              <p className="text-2xl font-semibold tracking-tight text-ink">Preflight</p>
+              <p className="flex items-center gap-2.5 text-2xl font-semibold tracking-tight text-ink">
+                <LogoMark className="size-9" />
+                Preflight
+              </p>
               <p className="max-w-md text-sm leading-relaxed text-muted">
                 Execution guard for AI agents on HSK Chain mainnet (177){mainnetPending ? " (pending)" : ""}, pricing the HSKSwap Uniswap V3 pool WHSK/USDT
                 0.3%. Built for the HSK Chain Horizon Hackathon, Seoul. Not trading advice.
