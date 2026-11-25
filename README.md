@@ -207,6 +207,8 @@ Per swap: impact (ex-fee) from replaying the pre-swap state with the pool simula
 | HSKSwap V3 Factory (external) | `0x972cA9D1662F5e029cD18327D29026532E84c742` |
 | WHSK/USDT 0.3% pool (external) | `0x4ff515761864e7838B0AdB8b5b2B8B7A068905dC` |
 
+**Testnet backup (chain 133, test Uniswap V3 pool, not HSKSwap):** ExecutionGuard [`0xF30860d72319B376D87503D2F8e725141Bb0CB5f`](https://testnet-explorer.hskchain.net/address/0xF30860d72319B376D87503D2F8e725141Bb0CB5f), GuardedRouter [`0x0e21210ED3630f8aEC74CF5Ae2CA73C2114921d6`](https://testnet-explorer.hskchain.net/address/0x0e21210ED3630f8aEC74CF5Ae2CA73C2114921d6), one [successful `guardedSwap`](https://testnet-explorer.hskchain.net/tx/0xb0d7f0651f39c467e5fa9dd7f5458a664760565c5b948eb4cb72579db5e3f38b) and one [reverted after a front-run](https://testnet-explorer.hskchain.net/tx/0xba7348a90dba847d552675840407dddb37cfa700018b5af610b3f3d2dd42e31d) (`DeviationTooHigh(480, 200)`). Details and caveats: [`docs/DEPLOYMENTS.md`](docs/DEPLOYMENTS.md).
+
 Deploy: [`contracts/script/Deploy.s.sol`](contracts/script/Deploy.s.sol) (chain 177/133 only) reads `DEPLOYER_PRIVATE_KEY`, `ATTESTOR_ADDRESS` (required) and `GUARD_OWNER` from env; dry-run without `--broadcast` first. Ownership is two-step (`GUARD_OWNER` must call `acceptOwnership()`); renounce is disabled. Never commit private keys.
 
 ## Evidence

@@ -17,6 +17,7 @@ Semua perubahan penting dicatat di sini. Format mengikuti Keep a Changelog, vers
 - Demo revert jujur `pnpm --filter @preflight/agent start --scenario revert` (hanya anvil): bot front-run di blok yang sama sehingga `guardedSwap` agent yang lolos simulasi di-revert `DeviationTooHigh`; ikut di e2e.
 - Error dari `guardedSwap` yang revert setelah ditambang kini di-decode dengan replay `eth_call` di blok itu.
 - Indexer biaya eksekusi `packages/core/src/indexer.ts`: impact per swap dari replay simulasi, fee, deviasi vs med5 CEX, biaya USD, agregasi per wallet, feed event `GuardedSwap`.
+- Deploy cadangan HSK testnet (chain 133) dengan pool uji Uniswap V3 (bukan HSKSwap): `apps/agent/scripts/testnet-demo.ts` + fixture `contracts/script/testnet/TestnetKit.sol`; satu `guardedSwap` sukses dan satu revert `DeviationTooHigh(480, 200)` setelah front-run (alamat & tx di `docs/DEPLOYMENTS.md`).
 - `pnpm snapshot` → `apps/web/data/leaderboard.json` (30 hari, 2.136 swap, 31 wallet, volume $40.651).
 - Halaman `/leaderboard`, endpoint `/api/leaderboard`, dan landing `/` baru (Tailwind, tema gelap).
 - Halaman `/playground`: arah + jumlah (preset 50/1.000/5.000/20.000), alamat agent/executor opsional, kartu verdict, breakdown biaya (fee, impact, deviasi vs CEX, total bps & USD), ukuran maksimal dalam policy, status tanda tangan, dan kurva biaya vs ukuran order; pesan ramah untuk 429/5xx.
