@@ -1,0 +1,24 @@
+{
+  "name": "@preflight/agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/main.ts",
+    "test": "vitest run",
+    "test:e2e": "PREFLIGHT_E2E=1 vitest run test/e2e.anvil.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "1.14.0",
+    "@preflight/core": "workspace:*",
+    "tsx": "4.23.15",
+    "viem": "2.58.6",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.7",
+    "typescript": "7.0.2",
+    "vitest": "5.1.1"
+  }
+}

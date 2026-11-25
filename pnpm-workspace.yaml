@@ -1,0 +1,10 @@
+packages:
+  - packages/*
+  - apps/*
+allowBuilds:
+  esbuild: true
+minimumReleaseAgeExclude:
+  - '@types/node@26.6.7'
+  - viem@2.58.6
+  - '@types/react@19.3.1'
+  - '@anthropic-ai/sdk@1.14.0'

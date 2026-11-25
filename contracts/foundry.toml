@@ -1,0 +1,21 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.24"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+remappings = [
+  "forge-std/=lib/forge-std/src/",
+  "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+]
+
+# Fork test test_fork_exportImpactFixture writes the TS cross-check fixture (opt-in via env).
+fs_permissions = [{ access = "write", path = "../packages/core/fixtures" }]
+
+[rpc_endpoints]
+hsk = "${HSK_RPC_URL}"
+
+[fmt]
+line_length = 110

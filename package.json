@@ -1,0 +1,16 @@
+{
+  "name": "preflight",
+  "private": true,
+  "description": "Preflight — execution guard for AI agents on HSK Chain",
+  "scripts": {
+    "test": "pnpm -r test",
+    "typecheck": "pnpm -r typecheck",
+    "snapshot": "pnpm --filter web snapshot",
+    "contracts:build": "cd contracts && forge build",
+    "contracts:test": "cd contracts && forge test",
+    "contracts:test:fork": "cd contracts && forge test --fork-url ${HSK_RPC_URL:-https://mainnet.hsk.xyz}"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

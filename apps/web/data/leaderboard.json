@@ -1,0 +1,433 @@
+{
+ "generatedAt": "2026-11-25T03:17:02.856Z",
+ "range": {
+  "fromBlock": 29302744,
+  "toBlock": 30598744,
+  "fromIso": "2026-10-25T18:36:25.000Z",
+  "toIso": "2026-11-24T14:57:27.000Z"
+ },
+ "sources": {
+  "logs": "research/data/swap_logs.json",
+  "klines": "research/data/cex_klines.json (HashKey Global HSKUSDT 1m)",
+  "senders": "eth_getTransactionByHash (cache apps/web/data/tx_senders.json)"
+ },
+ "reconciliation": {
+  "expectedSwaps": 2136,
+  "expectedVolumeUsd": 40651,
+  "swaps": 2136,
+  "volumeUsd": 40651.23091400012,
+  "note": "Jumlah swap dan volume cocok dengan research/REPORT.md."
+ },
+ "summary": {
+  "swaps": 2136,
+  "volumeUsd": 40651.23091400012,
+  "meanCostBps": 36.62696629213488,
+  "medianCostBps": 30.35,
+  "volumeWeightedCostBps": 38.955100826320745,
+  "totalCostUsd": 158.35727989689215,
+  "feeImpactUsd": 126.50724051649149,
+  "uniqueWallets": 31,
+  "medianImpactBps": 0.35,
+  "medianExecutionCostBps": 30.35,
+  "staleReference": 25,
+  "impactSources": {
+   "sim-exact-in": 1539,
+   "sim-exact-out": 596,
+   "observed": 0,
+   "inferred": 1
+  },
+  "firstSwapAt": 1792953385,
+  "lastSwapAt": 1795532247
+ },
+ "histogram": [
+  {
+   "fromBps": 30,
+   "toBps": 31,
+   "swaps": 1718,
+   "volumeUsd": 26427.955231999964
+  },
+  {
+   "fromBps": 31,
+   "toBps": 32,
+   "swaps": 56,
+   "volumeUsd": 2913.4214620000007
+  },
+  {
+   "fromBps": 32,
+   "toBps": 35,
+   "swaps": 38,
+   "volumeUsd": 2812.8329400000002
+  },
+  {
+   "fromBps": 35,
+   "toBps": 50,
+   "swaps": 69,
+   "volumeUsd": 2701.489579
+  },
+  {
+   "fromBps": 50,
+   "toBps": 100,
+   "swaps": 224,
+   "volumeUsd": 4979.702915
+  },
+  {
+   "fromBps": 100,
+   "toBps": 200,
+   "swaps": 31,
+   "volumeUsd": 815.828786
+  },
+  {
+   "fromBps": 200,
+   "toBps": null,
+   "swaps": 0,
+   "volumeUsd": 0
+  }
+ ],
+ "wallets": [
+  {
+   "wallet": "0xEc77eF78B577d758AD2eA59BD52c976BbABB4154",
+   "swaps": 2020,
+   "volumeUsd": 38530.01824000006,
+   "meanCostBps": 35.64492574257409,
+   "medianCostBps": 30.35,
+   "volumeWeightedCostBps": 39.060217527657166,
+   "totalCostUsd": 150.49908937990008,
+   "feeImpactUsd": 119.06702148749956,
+   "lastSwapAt": 1795528111
+  },
+  {
+   "wallet": "0xa40a12D0c47c9B7D91ca0C93E900892C3B45F000",
+   "swaps": 14,
+   "volumeUsd": 1906.675941,
+   "meanCostBps": 33.181428571428576,
+   "medianCostBps": 32.34,
+   "volumeWeightedCostBps": 35.560834764112656,
+   "totalCostUsd": 6.7802988086610005,
+   "feeImpactUsd": 6.780298808661,
+   "lastSwapAt": 1795237567
+  },
+  {
+   "wallet": "0x00326804fe6148BF5cE218dB6cBB285C4627A4b8",
+   "swaps": 1,
+   "volumeUsd": 80.443478,
+   "meanCostBps": 31.86,
+   "medianCostBps": 31.86,
+   "volumeWeightedCostBps": 31.86,
+   "totalCostUsd": 0.256292920908,
+   "feeImpactUsd": 0.256292920908,
+   "lastSwapAt": 1794192945
+  },
+  {
+   "wallet": "0x98d50F1e66AD28aD1beEb377E83C940EA8ca5568",
+   "swaps": 15,
+   "volumeUsd": 41.03506899999999,
+   "meanCostBps": 54.99066666666666,
+   "medianCostBps": 61,
+   "volumeWeightedCostBps": 52.74034870344682,
+   "totalCostUsd": 0.21642038481300005,
+   "feeImpactUsd": 0.12360974921300001,
+   "lastSwapAt": 1795498605
+  },
+  {
+   "wallet": "0xCfDDe8CF26062229e1Bc12294c1029E531a7ac9A",
+   "swaps": 3,
+   "volumeUsd": 16.200000000000003,
+   "meanCostBps": 104.12,
+   "medianCostBps": 104.12,
+   "volumeWeightedCostBps": 104.11999999999998,
+   "totalCostUsd": 0.1686744,
+   "feeImpactUsd": 0.048794399999999995,
+   "lastSwapAt": 1793417155
+  },
+  {
+   "wallet": "0xaFBC2E998293A1d0Aa14644170729209a49Ee0F5",
+   "swaps": 1,
+   "volumeUsd": 10,
+   "meanCostBps": 30.44,
+   "medianCostBps": 30.44,
+   "volumeWeightedCostBps": 30.44,
+   "totalCostUsd": 0.030440000000000002,
+   "feeImpactUsd": 0.03044,
+   "lastSwapAt": 1793006305
+  },
+  {
+   "wallet": "0x7e093BA1474b79481f9B87D66c99a819F25e82E2",
+   "swaps": 3,
+   "volumeUsd": 6.430142,
+   "meanCostBps": 93.38,
+   "medianCostBps": 109.06,
+   "volumeWeightedCostBps": 109.59727027490217,
+   "totalCostUsd": 0.070472601068,
+   "feeImpactUsd": 0.019324875968,
+   "lastSwapAt": 1795443975
+  },
+  {
+   "wallet": "0x1a71Af3aF568f85B8912f6fC6D92a75B1158850B",
+   "swaps": 6,
+   "volumeUsd": 6.009577999999999,
+   "meanCostBps": 40.35666666666667,
+   "medianCostBps": 35.02,
+   "volumeWeightedCostBps": 40.36300210929953,
+   "totalCostUsd": 0.024256460949,
+   "feeImpactUsd": 0.018042757448999996,
+   "lastSwapAt": 1793602937
+  },
+  {
+   "wallet": "0x062aF28251bcde1562f3F358096D54C18d7CeF2B",
+   "swaps": 5,
+   "volumeUsd": 5.771785,
+   "meanCostBps": 55.826,
+   "medianCostBps": 57.04,
+   "volumeWeightedCostBps": 47.49400260577966,
+   "totalCostUsd": 0.027412517183,
+   "feeImpactUsd": 0.017334993083,
+   "lastSwapAt": 1795267641
+  },
+  {
+   "wallet": "0x0809434D95AB31d21e9DAa6D4CdBd0c1b99F8cF3",
+   "swaps": 5,
+   "volumeUsd": 5.512489,
+   "meanCostBps": 75.018,
+   "medianCostBps": 102,
+   "volumeWeightedCostBps": 66.2897527378286,
+   "totalCostUsd": 0.036542153278,
+   "feeImpactUsd": 0.016549910578,
+   "lastSwapAt": 1795442197
+  },
+  {
+   "wallet": "0x9145AcF83F1ff539dA1dDF0D50c791C302AfE890",
+   "swaps": 5,
+   "volumeUsd": 4.988187,
+   "meanCostBps": 36.624,
+   "medianCostBps": 30.03,
+   "volumeWeightedCostBps": 36.620101405580826,
+   "totalCostUsd": 0.018266791377,
+   "feeImpactUsd": 0.014976531477000002,
+   "lastSwapAt": 1793603479
+  },
+  {
+   "wallet": "0x0372B63390591007e61d0E15EcB40579F0D08dE3",
+   "swaps": 5,
+   "volumeUsd": 4.807331,
+   "meanCostBps": 81.618,
+   "medianCostBps": 89.01,
+   "volumeWeightedCostBps": 79.40123634507381,
+   "totalCostUsd": 0.038170802492,
+   "feeImpactUsd": 0.014432005792,
+   "lastSwapAt": 1795489569
+  },
+  {
+   "wallet": "0x746cd4270a14eb55BB8A6A4C39204C7108b0e49d",
+   "swaps": 8,
+   "volumeUsd": 4.796227,
+   "meanCostBps": 45.137499999999996,
+   "medianCostBps": 36.52,
+   "volumeWeightedCostBps": 55.24691810875507,
+   "totalCostUsd": 0.026497676029999997,
+   "feeImpactUsd": 0.014397676030000002,
+   "lastSwapAt": 1793895189
+  },
+  {
+   "wallet": "0xBEdD38f260e3C936d0A743A57F211cde97f7401F",
+   "swaps": 1,
+   "volumeUsd": 4.793238,
+   "meanCostBps": 62.11,
+   "medianCostBps": 62.11,
+   "volumeWeightedCostBps": 62.10999999999999,
+   "totalCostUsd": 0.029770801217999996,
+   "feeImpactUsd": 0.014432439617999998,
+   "lastSwapAt": 1793489041
+  },
+  {
+   "wallet": "0x072E401629ac6Cb31516a30bE883FA053224D108",
+   "swaps": 5,
+   "volumeUsd": 4.45077,
+   "meanCostBps": 58.41600000000001,
+   "medianCostBps": 41.02,
+   "volumeWeightedCostBps": 68.32756730633126,
+   "totalCostUsd": 0.030411028674,
+   "feeImpactUsd": 0.013361341274,
+   "lastSwapAt": 1795341447
+  },
+  {
+   "wallet": "0xD19CE1b12B3caD9E5a19455d1D368F52aCD2A761",
+   "swaps": 4,
+   "volumeUsd": 3.98872,
+   "meanCostBps": 65.02250000000001,
+   "medianCostBps": 57.019999999999996,
+   "volumeWeightedCostBps": 65.01785287761487,
+   "totalCostUsd": 0.025933801013,
+   "feeImpactUsd": 0.011975134513,
+   "lastSwapAt": 1793530915
+  },
+  {
+   "wallet": "0x05C6516a09b04230620843eA2B624056658697C6",
+   "swaps": 5,
+   "volumeUsd": 3.3298889999999997,
+   "meanCostBps": 68.212,
+   "medianCostBps": 79.02,
+   "volumeWeightedCostBps": 62.76392919403621,
+   "totalCostUsd": 0.020899691742,
+   "feeImpactUsd": 0.009994774142,
+   "lastSwapAt": 1795267639
+  },
+  {
+   "wallet": "0x0449410eF3b726138A1C2E6F1e0C3BF01Bf17c1F",
+   "swaps": 4,
+   "volumeUsd": 3.323303,
+   "meanCostBps": 58.769999999999996,
+   "medianCostBps": 60.03,
+   "volumeWeightedCostBps": 63.76546207793872,
+   "totalCostUsd": 0.021191195141999998,
+   "feeImpactUsd": 0.009977781242,
+   "lastSwapAt": 1795243687
+  },
+  {
+   "wallet": "0x02139aB36E4B3dd88c286C5C53306F08258E4D53",
+   "swaps": 5,
+   "volumeUsd": 3.144845,
+   "meanCostBps": 65.60999999999999,
+   "medianCostBps": 74,
+   "volumeWeightedCostBps": 55.141387476966266,
+   "totalCostUsd": 0.01734111167,
+   "feeImpactUsd": 0.00943949217,
+   "lastSwapAt": 1795442313
+  },
+  {
+   "wallet": "0xCa3b5788a5296429CCc2729dBB1bB0d523e992Fd",
+   "swaps": 2,
+   "volumeUsd": 2.001214,
+   "meanCostBps": 30.025,
+   "medianCostBps": 30.025,
+   "volumeWeightedCostBps": 30.024982165825342,
+   "totalCostUsd": 0.006008641465999999,
+   "feeImpactUsd": 0.006008641465999999,
+   "lastSwapAt": 1793467479
+  },
+  {
+   "wallet": "0x8745a069574F6cD367d9877F04715617A77B7a6d",
+   "swaps": 5,
+   "volumeUsd": 1.342108,
+   "meanCostBps": 30.008,
+   "medianCostBps": 30,
+   "volumeWeightedCostBps": 30.012049611506676,
+   "totalCostUsd": 0.004027941188,
+   "feeImpactUsd": 0.004027941188,
+   "lastSwapAt": 1795260935
+  },
+  {
+   "wallet": "0x3EeE68432E42cA90b1B9500732bB958E25155AFA",
+   "swaps": 1,
+   "volumeUsd": 0.88711,
+   "meanCostBps": 30.02,
+   "medianCostBps": 30.02,
+   "volumeWeightedCostBps": 30.02,
+   "totalCostUsd": 0.00266310422,
+   "feeImpactUsd": 0.00266310422,
+   "lastSwapAt": 1795339757
+  },
+  {
+   "wallet": "0x6ce5A7E36A4e02B171Df6eA4d584e67a1BCd90D1",
+   "swaps": 2,
+   "volumeUsd": 0.523557,
+   "meanCostBps": 30,
+   "medianCostBps": 30,
+   "volumeWeightedCostBps": 29.999999999999996,
+   "totalCostUsd": 0.001570671,
+   "feeImpactUsd": 0.001570671,
+   "lastSwapAt": 1793640209
+  },
+  {
+   "wallet": "0xF263F79cC709827FD476d6694C7352C2A7De4369",
+   "swaps": 1,
+   "volumeUsd": 0.244603,
+   "meanCostBps": 30,
+   "medianCostBps": 30,
+   "volumeWeightedCostBps": 30,
+   "totalCostUsd": 0.000733809,
+   "feeImpactUsd": 0.000733809,
+   "lastSwapAt": 1795211521
+  },
+  {
+   "wallet": "0x1867b82dc712242cF301Ea53D58d1F4A1558E418",
+   "swaps": 1,
+   "volumeUsd": 0.126513,
+   "meanCostBps": 90,
+   "medianCostBps": 90,
+   "volumeWeightedCostBps": 90,
+   "totalCostUsd": 0.0011386169999999998,
+   "feeImpactUsd": 0.0003795389999999999,
+   "lastSwapAt": 1795339887
+  },
+  {
+   "wallet": "0x4e4cCbA2822A4838Fa653028Fa91749bcF923c59",
+   "swaps": 1,
+   "volumeUsd": 0.12086,
+   "meanCostBps": 89,
+   "medianCostBps": 89,
+   "volumeWeightedCostBps": 89,
+   "totalCostUsd": 0.0010756539999999999,
+   "feeImpactUsd": 0.00036258,
+   "lastSwapAt": 1795532247
+  },
+  {
+   "wallet": "0xD47f09708E00834f00A6BA63dF5Cc272935302A8",
+   "swaps": 1,
+   "volumeUsd": 0.1,
+   "meanCostBps": 87,
+   "medianCostBps": 87,
+   "volumeWeightedCostBps": 87.00000000000001,
+   "totalCostUsd": 0.0008700000000000001,
+   "feeImpactUsd": 0.0003,
+   "lastSwapAt": 1793242113
+  },
+  {
+   "wallet": "0x04b0A7AFD4Ab71C5d49c4bd578C2D9B8eA7DF36E",
+   "swaps": 1,
+   "volumeUsd": 0.087152,
+   "meanCostBps": 51,
+   "medianCostBps": 51,
+   "volumeWeightedCostBps": 51.00000000000001,
+   "totalCostUsd": 0.00044447519999999996,
+   "feeImpactUsd": 0.000261456,
+   "lastSwapAt": 1793528733
+  },
+  {
+   "wallet": "0xD8bD4dBC8CdCB7E171892e9b7d7f52135d674032",
+   "swaps": 1,
+   "volumeUsd": 0.04,
+   "meanCostBps": 30,
+   "medianCostBps": 30,
+   "volumeWeightedCostBps": 29.999999999999996,
+   "totalCostUsd": 0.00011999999999999999,
+   "feeImpactUsd": 0.00011999999999999999,
+   "lastSwapAt": 1795211691
+  },
+  {
+   "wallet": "0x99375054F10Bd5854bFa850E1a422f4d0D540f07",
+   "swaps": 1,
+   "volumeUsd": 0.026297,
+   "meanCostBps": 72,
+   "medianCostBps": 72,
+   "volumeWeightedCostBps": 72,
+   "totalCostUsd": 0.00018933840000000002,
+   "feeImpactUsd": 0.000078891,
+   "lastSwapAt": 1793295513
+  },
+  {
+   "wallet": "0xEbd93B8ad96C9174807E23d8520d3C9d62C3C388",
+   "swaps": 4,
+   "volumeUsd": 0.012268000000000001,
+   "meanCostBps": 43,
+   "medianCostBps": 38.5,
+   "volumeWeightedCostBps": 44.92932833387675,
+   "totalCostUsd": 0.0000551193,
+   "feeImpactUsd": 0.000036804,
+   "lastSwapAt": 1792991667
+  }
+ ],
+ "feed": {
+  "router": null,
+  "items": []
+ }
+}

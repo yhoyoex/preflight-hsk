@@ -1,0 +1,22 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+
+# Foundry
+contracts/out/
+contracts/cache/
+contracts/broadcast/
+
+# Next.js
+.next/
+
+# research scratch / Python
+research/__pycache__/
+__pycache__/
+*.pyc
+
+.uf-upload-tmp/
+.DS_Store
+.vercel/
